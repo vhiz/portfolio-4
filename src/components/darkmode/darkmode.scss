@@ -1,0 +1,18 @@
+.dark {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border: 1.5px solid #bbb;
+  border-radius: 30px;
+  font-size: 12px;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  .ball {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(18, 148, 18);
+    border-radius: 50%;
+  }
+}

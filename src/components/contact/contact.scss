@@ -1,0 +1,77 @@
+@import "../../global.scss";
+.contact {
+  h1 {
+    font-size: 50px;
+    text-align: center;
+
+    @include mobile-only {
+      margin-bottom: 20px;
+      font-size: 30px !important;
+    }
+    @include ipad-only {
+      font-size: 40px;
+    }
+    @include small-screen {
+      font-size: 50px;
+    }
+  }
+  .content {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    .imgContanier {
+      flex: 1;
+      height: 500px;
+      position: relative;
+      @include mobile-only {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        animation: animate 3s infinite ease alternate;
+        @keyframes animate {
+          from {
+            transform: translateY(-15px);
+          }
+          to {
+            transform: translateY(0px) scale(1.03);
+          }
+        }
+      }
+    }
+
+    form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        color: #bbb;
+        outline: none;
+        border: none;
+        border: 3px solid #bbb;
+        @include ipad-only {
+          padding: 10px;
+        }
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        background-color: rgb(172, 172, 41);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+}

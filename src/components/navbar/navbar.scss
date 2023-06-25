@@ -1,0 +1,19 @@
+@import "../../global.scss";
+.navbar {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+    @include mobile-only {
+      display: none;
+    }
+  }
+}

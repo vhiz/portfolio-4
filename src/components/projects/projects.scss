@@ -1,0 +1,22 @@
+@import "../../global.scss";
+.projects {
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .head {
+    font-size: 50px;
+    color: #acac29;
+    @include mobile-only {
+      font-size: 30px !important;
+    }
+    @include ipad-only {
+      font-size: 40px;
+    }
+    @include small-screen {
+      font-size: 45px;
+    }
+  }
+}

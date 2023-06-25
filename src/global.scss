@@ -1,0 +1,34 @@
+$mobile-breakpoint: 480px;
+$ipad-breakpoint: 768px;
+$small-breakpoint: 1024px;
+$big-breakpoint: 1200px;
+$older-breakpoint: 320px;
+
+@mixin older-only {
+  @media (max-width: $older-breakpoint) {
+    @content;
+  }
+}
+@mixin mobile-only {
+  @media (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin ipad-only {
+  @media (max-width: $ipad-breakpoint) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media (max-width: $small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media (max-width: $big-breakpoint) {
+    @content;
+  }
+}

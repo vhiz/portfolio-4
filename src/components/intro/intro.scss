@@ -1,0 +1,87 @@
+@import "../../global.scss";
+.intro {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+
+  @include mobile-only {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: max-content;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(172, 172, 41);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 72px;
+      background: linear-gradient(to bottom, #4c3219, #bbb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include mobile-only {
+        font-size: 40px !important;
+      }
+
+      @include older-only {
+        font-size: 30px;
+      }
+
+      @include ipad-only {
+        font-size: 50px;
+      }
+      @include small-screen {
+        font-size: 59px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 300;
+
+      @include mobile-only {
+        font-size: 20px;
+      }
+      @include ipad-only {
+        font-size: 22px;
+      }
+      @include small-screen {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .imgContainer {
+    flex: 1;
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: contain;
+      animation: animate 2s infinite ease alternate;
+
+      @include mobile-only {
+        display: none;
+        flex: none;
+      }
+
+      @keyframes animate {
+        to {
+          transform: translateY(20px);
+        }
+      }
+    }
+  }
+}
