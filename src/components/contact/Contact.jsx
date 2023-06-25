@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [error, setError] = useState(false);
